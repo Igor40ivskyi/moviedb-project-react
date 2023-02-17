@@ -1,9 +1,9 @@
 const App = () => {
     return (
         <div>
-            App 
+            Appp
         </div>
     );
 };
 
-export {App};
+export {App}; 
