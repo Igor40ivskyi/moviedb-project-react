@@ -13,7 +13,6 @@ const MoviesList = () => {
     const {genres} = useSelector(state => state.genres);
 
     const moviesList = movies.results;
-    console.log(moviesList);
 
     useEffect(() => {
         dispatch(moviesActions.getAllMovies());
