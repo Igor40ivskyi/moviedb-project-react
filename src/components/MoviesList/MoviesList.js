@@ -1,21 +1,28 @@
-import {moviesService} from "../../services/moviesService";
-import {useEffect, useState} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {useEffect} from "react";
+import {moviesActions} from "../../redux/slices/moviesSlice";
+import {genresActions} from "../../redux/slices/genresSlice";
+import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
 
 const MoviesList = () => {
 
-    let [state,setState] = useState([]);
-    console.log(state.results);
+    const dispatch = useDispatch();
+
+    const {movies} = useSelector(state => state.movies);
+
+    const {genres} = useSelector(state => state.genres);
+
+    const moviesList = movies.results;
+    console.log(moviesList);
+
     useEffect(() => {
-       try{
-           moviesService.getAll().then(({data})=>setState(data))
-       }catch (e) {
-           console.log(e.response);
-       }
+        dispatch(moviesActions.getAllMovies());
+        dispatch(genresActions.getAllGenres());
     },[]);
 
     return (
-        <div>
-            MoviesList
+        <div style={{display:'flex',flexWrap:'wrap',width:1000}}>
+            {moviesList && moviesList.map(movie=><MoviesListCard key={movie.id} movie={movie}/>)}
         </div>
     );
 };

@@ -1,9 +1,12 @@
 import React from 'react';
 
+import css from './Header.module.css';
+import {Genres} from "../Genres/Genres";
+
 const Header = () => {
     return (
-        <div>
-            
+        <div className={css.Header}>
+            <Genres/>
         </div>
     );
 };

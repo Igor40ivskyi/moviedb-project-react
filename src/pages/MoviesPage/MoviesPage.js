@@ -1,7 +1,11 @@
+import {MoviesList} from "../../components";
+import Header from "../../components/Header/Header";
+
 const MoviesPage = () => {
     return (
         <div>
-            MoviesPage
+            <Header/>
+            <MoviesList/>
         </div>
     );
 };

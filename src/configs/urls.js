@@ -1,7 +1,8 @@
-const baseURL = 'https://api.themoviedb.org/4';
+const baseURL = 'https://api.themoviedb.org/3';
 
 const points = {
     movies: '/discover/movie',
+    genres: '/genre/movie/list',
 
 };
 

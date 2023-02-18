@@ -1,0 +1,15 @@
+.genresBlock{
+    width: 100px;
+    height: 40px;
+    background-color: navy;
+    transition: 500ms;
+    z-index: 1;
+}
+
+.genresBlock:hover {
+    width: 800px;
+    height: 600px;
+    /*margin-top: 560px;*/
+    transition: 500ms;
+    z-index: 1;
+}
