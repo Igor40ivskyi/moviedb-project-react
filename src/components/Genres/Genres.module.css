@@ -1,5 +1,5 @@
 .genresBlock{
-    width: 100px;
+    width: 800px;
     height: 40px;
     background-color: navy;
     transition: 500ms;
@@ -7,6 +7,9 @@
     overflow:hidden;
     display: flex;
     flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .genresBlock:hover {
@@ -17,7 +20,7 @@
     z-index: 1;
     overflow: hidden;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
 .genreBlock{
