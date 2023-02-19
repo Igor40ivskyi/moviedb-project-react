@@ -4,7 +4,7 @@ import {moviesService} from "../../services/moviesService";
 const initialState = {
     moviesList: [],
     page: null,
-
+    similarMovies:[],
     errors: null,
     loading: null,
 

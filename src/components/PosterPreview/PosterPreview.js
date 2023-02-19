@@ -6,7 +6,7 @@ const PosterPreview = ({poster_path}) => {
 
     return (
         <div>
-            <img style={{maxWidth:'100%',maxHeight:'100%'}} src={fullPoster} alt="moviePoster"/>
+            <img style={{maxWidth:'100%',maxHeight:'600px'}} src={fullPoster} alt="moviePoster"/>
         </div>
     );
 };

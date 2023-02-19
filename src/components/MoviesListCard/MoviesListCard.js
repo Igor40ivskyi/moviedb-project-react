@@ -24,7 +24,7 @@ const MoviesListCard = ({movie}) => {
                 <PosterPreview key={id} poster_path={poster_path}/>
             </div>
 
-            <button onClick={()=>similarGenres(id)}>GET SIMILAR GENRES</button>
+            <button onClick={()=>similarGenres(id)}>GET SIMILAR MOVIES</button>
         </div>
     );
 };
