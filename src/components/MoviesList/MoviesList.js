@@ -1,27 +1,44 @@
 import {useDispatch, useSelector} from "react-redux";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
+
 import {moviesActions} from "../../redux/slices/moviesSlice";
 import {genresActions} from "../../redux/slices/genresSlice";
 import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
+
+import css from './MoviesList.module.css'
 
 const MoviesList = () => {
 
     const dispatch = useDispatch();
 
-    const {movies} = useSelector(state => state.movies);
+    const [currentPage, setCurrentPage] = useState(1);
+
+    console.log(currentPage);
+
+    const {moviesList,page} = useSelector(state => state.movies);
+
+
 
     const {genres} = useSelector(state => state.genres);
 
-    const moviesList = movies.results;
+
 
     useEffect(() => {
-        dispatch(moviesActions.getAllMovies());
+
+        dispatch(moviesActions.getAllMovies({currentPage}));
+
         dispatch(genresActions.getAllGenres());
-    },[]);
+    },[currentPage]);
 
     return (
-        <div style={{display:'flex',flexWrap:'wrap',width:1000}}>
-            {moviesList && moviesList.map(movie=><MoviesListCard key={movie.id} movie={movie}/>)}
+        <div>
+            <div className={css.moviesListBlock}>
+                {moviesList && moviesList.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}
+            </div>
+            <div>
+                <button disabled={currentPage === 1} onClick={() => setCurrentPage(currentPage => currentPage - 1)}>PREV</button>
+                <button disabled={currentPage === 37152} onClick={()=>setCurrentPage(currentPage=>currentPage+1)}>NEXT</button>
+            </div>
         </div>
     );
 };

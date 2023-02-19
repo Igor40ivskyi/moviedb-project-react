@@ -2,7 +2,9 @@ import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import {moviesService} from "../../services/moviesService";
 
 const initialState = {
-    movies: [],
+    moviesList: [],
+    page: null,
+
     errors: null,
     loading: null,
 
@@ -10,9 +12,9 @@ const initialState = {
 
 const getAllMovies = createAsyncThunk(
     'moviesSlice/getAllMovies',
-    async (_, {rejectWithValue}) => {
+    async ({currentPage}, {rejectWithValue}) => {
         try {
-            const {data} = await moviesService.getAll();
+            const {data} = await moviesService.getAll(currentPage);
             return data;
         } catch (e) {
             return rejectWithValue(e.response.data);
@@ -26,7 +28,10 @@ let moviesSlice = createSlice({
     extraReducers: (builder => {
         builder
             .addCase(getAllMovies.fulfilled, (state, action) => {
-                state.movies = action.payload;
+                const {page,results} = action.payload;
+                console.log(action.payload);
+                state.moviesList = results;
+                state.page = page;
             });
     }),
 });
