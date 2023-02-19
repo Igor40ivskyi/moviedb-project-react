@@ -13,7 +13,6 @@ const MoviesList = () => {
 
     const [currentPage, setCurrentPage] = useState(1);
 
-    console.log(currentPage);
 
     const {moviesList,page} = useSelector(state => state.movies);
 

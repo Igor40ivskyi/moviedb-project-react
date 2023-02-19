@@ -1,6 +1,6 @@
 .moviesListBlock{
     display: flex;
     flex-wrap: wrap;
-    width: 1000px;
+    width: 1300px;
     margin-left: 100px;
 }

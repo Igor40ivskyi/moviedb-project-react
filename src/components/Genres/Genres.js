@@ -4,6 +4,8 @@ import {useSelector} from "react-redux";
 const Genres = () => {
     const {genres} = useSelector(state => state.genres);
     const genresList = genres.genres;
+
+    console.log(genres);
     return (
         <div className={css.genresBlock}>
             <div style={{width:800,textAlign:'center',height:90}}>GENRES</div>
