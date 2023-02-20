@@ -24,7 +24,7 @@ const MoviesListCard = ({movie}) => {
 
 
     const info = () => {
-        dispatch(moviesActions.pickMovie(movie))
+        localStorage.setItem('pickedMovieId',id)
         navigate('/info');
     };
 

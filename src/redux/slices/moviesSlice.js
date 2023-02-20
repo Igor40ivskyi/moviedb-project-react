@@ -5,7 +5,7 @@ const initialState = {
     moviesList: [],
     page: null,
     similarMovies:[],
-    pickedMovie: null,
+    movieById: null,
     errors: null,
     loading: null,
 
@@ -33,13 +33,22 @@ const getSimilarMovies = createAsyncThunk(
         }
     });
 
+const getMovieById = createAsyncThunk(
+    'moviesSlice/getMovieById',
+    async ({id}, {rejectWithValue}) => {
+        try {
+            const {data} = await moviesService.getById(id);
+            return data;
+        } catch (e) {
+            return rejectWithValue(e.response.data);
+        }
+    });
+
 let moviesSlice = createSlice({
     name: 'moviesSlice',
     initialState,
     reducers: {
-        pickMovie: (state, action) => {
-            state.pickedMovie = action.payload;
-        },
+
     },
     extraReducers: (builder => {
         builder
@@ -51,12 +60,15 @@ let moviesSlice = createSlice({
             .addCase(getSimilarMovies.fulfilled, (state, action) => {
                 const {page, results} = action.payload;
                 state.similarMovies = results;
+            })
+            .addCase(getMovieById.fulfilled, (state, action) => {
+                state.movieById = action.payload;
             });
     }),
 });
 
-const {reducer: moviesReducer, actions: {pickMovie}} = moviesSlice;
+const {reducer: moviesReducer, actions: {}} = moviesSlice;
 
-const moviesActions = {getAllMovies, getSimilarMovies,pickMovie};
+const moviesActions = {getAllMovies, getSimilarMovies,getMovieById};
 
 export {moviesReducer, moviesActions};
