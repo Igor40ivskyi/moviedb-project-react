@@ -3,7 +3,7 @@ import Header from "../../components/Header/Header";
 
 const MoviesPage = () => {
     return (
-        <div>
+        <div style={{background:'black'}}>
             <Header/>
             <MoviesList/>
         </div>

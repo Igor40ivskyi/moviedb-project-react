@@ -1,8 +1,36 @@
 .card {
-    height: 550px;
-    width: 300px;
-    background-color: slategrey;
+    height: 490px;
+    width: 250px;
+    background-color: black;
     color: snow;
-    margin: 10px;
+
+    margin: 20px;
+    margin-top: 40px;
     box-sizing: border-box;
+    box-shadow: 2px 2px 2px 2px chocolate;
+}
+
+.titleBlock {
+    height: 70px;
+    font-size: 20px;
+    color: orange;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Bahnschrift;
+    font-weight: 600;
+}
+
+.getSimilarButton{
+    background-color: goldenrod;
+    font-size: 20px;
+    margin-left: 10px;
+    box-shadow: 1px 1px 1px 1px slategrey;
+    cursor: pointer;
+}
+
+.getSimilarButton:hover{
+    background-color: black;
+    color: gold;
 }

@@ -16,7 +16,6 @@ const Genres = () => {
         dispatch(genresActions.getAllGenres());
     }, []);
 
-    console.log(genres);
 
     return (
         <div className={css.genresBlock}>

@@ -6,32 +6,39 @@ import {genresActions} from "../../redux/slices/genresSlice";
 import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
 
 import css from './MoviesList.module.css'
+import {useSearchParams} from "react-router-dom";
 
 const MoviesList = () => {
 
     const dispatch = useDispatch();
 
-    const [currentPage, setCurrentPage] = useState(1);
 
     const {moviesList,page} = useSelector(state => state.movies);
+
 
     const {genres} = useSelector(state => state.genres);
 
 
+    const [query,setQuery] = useSearchParams({page: '1'});
+
+
+
     useEffect(() => {
 
-        dispatch(moviesActions.getAllMovies({currentPage}));
+        dispatch(moviesActions.getAllMovies({page:query.get('page')}));
 
-    },[currentPage]);
+    },[query]);
+
 
     return (
         <div>
-            <div className={css.moviesListBlock}>
+            <div style={{marginTop:300}} className={css.moviesListBlock}>
                 {moviesList && moviesList.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}
             </div>
             <div>
-                <button disabled={currentPage === 1} onClick={() => setCurrentPage(currentPage => currentPage - 1)}>PREV</button>
-                <button disabled={currentPage === 37152} onClick={()=>setCurrentPage(currentPage=>currentPage+1)}>NEXT</button>
+                <button disabled={page === 1} onClick={() => setQuery(query=>({page:+query.get('page')-1}))}>PREV</button>
+
+                <button onClick={()=>setQuery(query=>({page:+query.get('page')+1}))}>NEXT</button>
             </div>
         </div>
     );

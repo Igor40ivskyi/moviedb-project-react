@@ -6,6 +6,7 @@ import {useDispatch} from "react-redux";
 import {moviesActions} from "../../redux/slices/moviesSlice";
 
 const MoviesListCard = ({movie}) => {
+
     const {id, original_language, original_title,poster_path} = movie;
 
     const navigate = useNavigate();
@@ -21,12 +22,12 @@ const MoviesListCard = ({movie}) => {
 
     return (
         <div className={css.card}>
-            <div>original_title {original_title}</div>
+            <div className={css.titleBlock}>{original_title}</div>
             <div>
                 <PosterPreview key={id} poster_path={poster_path}/>
             </div>
 
-            <button onClick={()=>similarGenres(id)}>SIMILAR MOVIES</button>
+            <button className={css.getSimilarButton} onClick={()=>similarGenres(id)}>SIMILAR MOVIES</button>
         </div>
     );
 };
