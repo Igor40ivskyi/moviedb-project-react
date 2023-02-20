@@ -12,7 +12,6 @@ const MoviesListCard = ({movie}) => {
 
     const {id, original_language, original_title,poster_path,vote_average} = movie;
 
-    console.log(movie);
 
     const navigate = useNavigate();
 
@@ -24,8 +23,14 @@ const MoviesListCard = ({movie}) => {
    }
 
 
+    const info = () => {
+        dispatch(moviesActions.pickMovie(movie))
+        navigate('/info');
+    };
+
     return (
-        <div className={css.card}>
+        <div onClick={info} className={css.card}>
+
             <div className={css.titleBlock}>{original_title}</div>
             <div>
                 <PosterPreview key={id} poster_path={poster_path}/>

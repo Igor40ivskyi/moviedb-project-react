@@ -3,7 +3,7 @@ import {MoviesPage} from "./pages/MoviesPage/MoviesPage";
 import {Route, Routes} from "react-router-dom";
 import {SimilarMovies} from "./components/SimilarMovies/SimilarMovies";
 import {ChosenGenre} from "./components/ChosenGenre/ChosenGenre";
-import {StarsRating} from "./components";
+import {MovieInfo, StarsRating} from "./components";
 
 const App = () => {
     return (
@@ -15,6 +15,7 @@ const App = () => {
             <Route path={'similar'} element={<SimilarMovies/>}/>
             <Route path={'chosenGenre'} element={<ChosenGenre/>}/>
             <Route path={'rating'} element={<StarsRating/>}/>
+            <Route path={'info'} element={<MovieInfo/>}/>
         </Routes>
     );
 };

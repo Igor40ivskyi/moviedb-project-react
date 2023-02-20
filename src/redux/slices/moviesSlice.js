@@ -5,6 +5,7 @@ const initialState = {
     moviesList: [],
     page: null,
     similarMovies:[],
+    pickedMovie: null,
     errors: null,
     loading: null,
 
@@ -35,7 +36,11 @@ const getSimilarMovies = createAsyncThunk(
 let moviesSlice = createSlice({
     name: 'moviesSlice',
     initialState,
-    reducers: {},
+    reducers: {
+        pickMovie: (state, action) => {
+            state.pickedMovie = action.payload;
+        },
+    },
     extraReducers: (builder => {
         builder
             .addCase(getAllMovies.fulfilled, (state, action) => {
@@ -50,8 +55,8 @@ let moviesSlice = createSlice({
     }),
 });
 
-const {reducer: moviesReducer, actions: {}} = moviesSlice;
+const {reducer: moviesReducer, actions: {pickMovie}} = moviesSlice;
 
-const moviesActions = {getAllMovies, getSimilarMovies};
+const moviesActions = {getAllMovies, getSimilarMovies,pickMovie};
 
 export {moviesReducer, moviesActions};
