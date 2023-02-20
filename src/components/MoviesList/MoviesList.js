@@ -13,20 +13,15 @@ const MoviesList = () => {
 
     const [currentPage, setCurrentPage] = useState(1);
 
-
     const {moviesList,page} = useSelector(state => state.movies);
 
-
-
     const {genres} = useSelector(state => state.genres);
-
 
 
     useEffect(() => {
 
         dispatch(moviesActions.getAllMovies({currentPage}));
 
-        dispatch(genresActions.getAllGenres());
     },[currentPage]);
 
     return (
