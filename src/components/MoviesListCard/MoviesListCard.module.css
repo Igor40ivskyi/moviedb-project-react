@@ -7,7 +7,12 @@
     margin: 20px;
     margin-top: 40px;
     box-sizing: border-box;
-    /*box-shadow: 2px 2px 2px 2px chocolate;*/
+    box-shadow: 2px 2px 2px 2px chocolate;
+}
+.card:hover{
+    box-shadow: 2px 2px 2px 2px goldenrod;
+    background-color: midnightblue;
+
 }
 
 .titleBlock {
