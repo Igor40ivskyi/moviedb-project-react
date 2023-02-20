@@ -7,7 +7,7 @@
     margin: 20px;
     margin-top: 40px;
     box-sizing: border-box;
-    box-shadow: 2px 2px 2px 2px chocolate;
+    /*box-shadow: 2px 2px 2px 2px chocolate;*/
 }
 
 .titleBlock {
@@ -22,15 +22,20 @@
     font-weight: 600;
 }
 
-.getSimilarButton{
-    background-color: goldenrod;
+.getSimilarButton {
+    background-color: dimgrey;
     font-size: 20px;
     margin-left: 10px;
-    box-shadow: 1px 1px 1px 1px slategrey;
+    /*box-shadow: 1px 1px 1px 1px slategrey;*/
+    border: 2px solid slategrey;
+    font-family: Rockwell;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .getSimilarButton:hover{
     background-color: black;
     color: gold;
+    border: 2px solid darkgoldenrod;
 }
+
