@@ -7,6 +7,9 @@ const moviesService = {
     getSimilar:(movie_id)=>apiService.get(`/movie/${movie_id}/similar`,{params:{page:3}}),
 
     getById: (id) => apiService.get(`/movie/${id}`),
+
+    getVideoByMovieId: (movie_id) => apiService.get(`/movie/${movie_id}/videos`),
+
 };
 
 export {moviesService};
