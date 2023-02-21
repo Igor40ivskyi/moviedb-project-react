@@ -9,6 +9,7 @@ const GenresList = () => {
 
     const {genresList} = useSelector(state => state.genres);
 
+
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -21,6 +22,7 @@ const GenresList = () => {
 
             <div className={css.genresListBlock}>
                 {genresList && genresList.map(genre => <OneGenre key={genre.id} genre={genre}/>)}
+
             </div>
         </div>
     );

@@ -3,6 +3,7 @@ import {MoviesPage} from "./pages/MoviesPage/MoviesPage";
 import {Navigate, Route, Routes} from "react-router-dom";
 import {SimilarMovies} from "./components/SimilarMovies/SimilarMovies";
 import {MovieInfo, StarsRating} from "./components";
+import {MoviesByGenreIdList} from "./components/MoviesByGenreIdList/MoviesByGenreIdList";
 
 const App = () => {
     return (
@@ -17,6 +18,7 @@ const App = () => {
                 <Route path={'similar'} element={<SimilarMovies/>}/>
                 <Route path={'rating'} element={<StarsRating/>}/>
                 <Route path={'info'} element={<MovieInfo/>}/>
+                <Route path={'moviesByGenre'} element={<MoviesByGenreIdList/>}/>
             </Route>
 
         </Routes>

@@ -24,7 +24,6 @@ const getGenresList = createAsyncThunk(
 const getMoviesByGenreId = createAsyncThunk(
     'genresSlice/getMoviesByGenre',
     async ({id}, {rejectWithValue}) => {
-
         try {
             const {data} = await genresService.getMoviesByGenreId(id);
             return data;
@@ -43,8 +42,7 @@ const genresSlice = createSlice({
                 state.genresList = action.payload.genres;
             })
             .addCase(getMoviesByGenreId.fulfilled, (state, action) => {
-                console.log(action.payload);
-                state.moviesByGenreId = action.payload;
+                state.moviesByGenreId = action.payload.results;
 
             });
     }),

@@ -28,6 +28,7 @@ const MoviesListCard = ({movie}) => {
 
             <div onClick={info} className={css.card}>
                 <div className={css.titleBlock}>{original_title}</div>
+
                 <div>
                     <PosterPreview key={id} poster_path={poster_path}/>
                 </div>
