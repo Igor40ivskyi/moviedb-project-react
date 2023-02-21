@@ -11,7 +11,7 @@ const Trailer = ({videosByMovieId}) => {
     console.log(video);
     return (
         <div>
-            {/*{video.key && <YouTube  videoId={video.key}/>}*/}
+            {video.key && <YouTube  videoId={video.key}/>}
         </div>
     );
 };
