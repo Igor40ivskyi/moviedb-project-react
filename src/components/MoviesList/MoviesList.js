@@ -7,7 +7,6 @@ import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
 import css from './MoviesList.module.css'
 
 import {useSearchParams} from "react-router-dom";
-import {Genres} from "../Genres/Genres";
 
 const MoviesList = () => {
 
@@ -39,7 +38,7 @@ const MoviesList = () => {
                     {moviesList && moviesList.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}
                 </div>
                 <div>
-                    <Genres/>
+
                 </div>
             </div>
 

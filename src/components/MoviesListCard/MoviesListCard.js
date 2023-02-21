@@ -1,9 +1,7 @@
 import css from './MoviesListCard.module.css'
 import {PosterPreview} from "../PosterPreview/PosterPreview";
-import {genresService} from "../../services/genresService";
 import {useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
-import {moviesActions} from "../../redux/slices/moviesSlice";
 
 
 import ReactStars from "react-stars/dist/react-stars";
@@ -17,10 +15,7 @@ const MoviesListCard = ({movie}) => {
 
     const dispatch = useDispatch();
 
-   async function similarGenres(id) {
-       dispatch(moviesActions.getSimilarMovies({id}));
-       navigate('/similar');
-   }
+
 
 
     const info = () => {
@@ -42,7 +37,6 @@ const MoviesListCard = ({movie}) => {
 
             </div>
 
-            <button className={css.getSimilarButton} onClick={() => similarGenres(id)}>GET SIMILAR MOVIES</button>
         </div>
     );
 };

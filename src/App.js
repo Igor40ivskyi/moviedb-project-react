@@ -2,7 +2,6 @@ import {MoviesList} from "./components/MoviesList/MoviesList";
 import {MoviesPage} from "./pages/MoviesPage/MoviesPage";
 import {Navigate, Route, Routes} from "react-router-dom";
 import {SimilarMovies} from "./components/SimilarMovies/SimilarMovies";
-import {ChosenGenre} from "./components/ChosenGenre/ChosenGenre";
 import {MovieInfo, StarsRating} from "./components";
 
 const App = () => {
@@ -16,7 +15,6 @@ const App = () => {
                 <Route index element={<Navigate to={'movies'}/>}/>
                 <Route path={'movies'} element={<MoviesList/>}/>
                 <Route path={'similar'} element={<SimilarMovies/>}/>
-                <Route path={'chosenGenre'} element={<ChosenGenre/>}/>
                 <Route path={'rating'} element={<StarsRating/>}/>
                 <Route path={'info'} element={<MovieInfo/>}/>
             </Route>

@@ -3,7 +3,7 @@ import {genresService} from "../../services/genresService";
 
 const initialState={
     genres: [],
-    similarGenres:[],
+    moviesByGenre:null,
     errors: null,
     loading: null,
 
@@ -21,12 +21,12 @@ const getAllGenres = createAsyncThunk(
     });
 
 
-const getSimilarGenres = createAsyncThunk(
-    'genresSlice/getSimilarGenres',
+const getMoviesByGenre = createAsyncThunk(
+    'genresSlice/getMoviesByGenre',
     async ({id}, {rejectWithValue}) => {
 
         try {
-            const {data} = await genresService.getSimilarGenres('###', id);
+            const {data} = await genresService.getMoviesByGenre(id);
             return data;
         } catch (e) {
             return rejectWithValue(e.response.data);
@@ -42,15 +42,15 @@ const genresSlice = createSlice({
             .addCase(getAllGenres.fulfilled, (state, action) => {
                 state.genres = action.payload;
             })
-            .addCase(getSimilarGenres.fulfilled, (state, action) => {
+            .addCase(getMoviesByGenre.fulfilled, (state, action) => {
                 const {page, results} = action.payload;
-                state.similarGenres = results;
+                state.moviesByGenre = results;
             });
     }),
 });
 
 const {reducer: genresReducer, actions: {}} = genresSlice;
 
-const genresActions = {getAllGenres,getSimilarGenres};
+const genresActions = {getAllGenres,getMoviesByGenre};
 
 export {genresActions, genresReducer};
