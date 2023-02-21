@@ -3,25 +3,29 @@
     flex-wrap: wrap;
     width: 1300px;
     margin-left: 100px;
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
 .prevButton {
     margin-left: 200px;
-    font-size: 24px;
     margin-top: 100px;
     margin-bottom: 100px;
-     color: orange;
-background-color: black;
-    width: 120px;
 
+    font-size: 24px;
+     color: orange;
+    width: 120px;
+    background-color: black;
+border-radius: 5px;
+    border: 2px solid darkgoldenrod;
 }
 
 .nextButton{
-font-size: 20px;
-    width: 100px;
-    background-color: black;
+    font-size: 24px;
     color: orange;
+    width: 120px;
+    background-color: black;
+    border-radius: 5px;
+    border: 2px solid darkgoldenrod;
 }
 
 .prevButton:hover{
@@ -29,7 +33,15 @@ font-size: 20px;
     border: 2px solid gold;
 }
 
+.nextButton:hover{
+    background-color: black;
+    border: 2px solid gold;
+}
 .prevButton:active{
-    background-color: goldenrod;
-    color: green;
+    background-color: gold;
+    color: black;
+}
+.nextButton:active{
+    background-color: gold;
+    color: black;
 }

@@ -11,7 +11,7 @@
 }
 .card:hover{
     box-shadow: 1px 1px 1px 1px dimgrey;
-    background-color: darkslategrey;
+    /*background-color: darkslategrey;*/
     cursor:cell;
 
 }
@@ -19,13 +19,17 @@
 .titleBlock {
     height: 70px;
     font-size: 20px;
-    color: orange;
+    color: dimgray;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Bahnschrift;
+    font-family: Rockwell;
     font-weight: 600;
+}
+.titleBlock:hover {
+    color: snow;
+
 }
 
 .getSimilarButton {

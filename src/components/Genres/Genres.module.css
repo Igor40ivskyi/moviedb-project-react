@@ -1,36 +1,19 @@
 .genresBlock{
-    width: 200px;
-    height: 40px;
-    background-color: silver;
-    transition: 500ms;
-    z-index: 1;
-    overflow:hidden;
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid goldenrod;
+margin-top: 150px;
 }
 
 .genresBlock:hover {
-    width: 200px;
-    height: 650px;
-    margin-top: 600px;
-    transition: 500ms;
-    z-index: 1;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
+
 
 }
 
 .genreBlock{
     height: 30px;
     width: 200px;
-    /*margin: 10px;*/
+    margin: 10px;
     text-align: left;
     background-color: slategrey;
+    font-size: 20px;
 }
 
 .genreBlock:hover{

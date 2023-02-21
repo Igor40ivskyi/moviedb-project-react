@@ -7,6 +7,7 @@ import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
 import css from './MoviesList.module.css'
 
 import {useSearchParams} from "react-router-dom";
+import {Genres} from "../Genres/Genres";
 
 const MoviesList = () => {
 
@@ -32,13 +33,22 @@ const MoviesList = () => {
 
     return (
         <div>
-            <div className={css.moviesListBlock}>
-                {moviesList && moviesList.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}
-            </div>
-            <div>
-                <button className={css.prevButton} disabled={page === 1} onClick={() => setQuery(query=>({page:+query.get('page')-1}))}>&larr;</button>
+            <div style={{display:'flex'}}>
 
-                <button className={css.nextButton} onClick={()=>setQuery(query=>({page:+query.get('page')+1}))}>&rarr;</button>
+                <div className={css.moviesListBlock}>
+                    {moviesList && moviesList.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}
+                </div>
+                <div>
+                    <Genres/>
+                </div>
+            </div>
+
+            <div>
+                <button className={css.prevButton} disabled={page === 1}
+                        onClick={() => setQuery(query => ({page: +query.get('page') - 1}))}>&larr;</button>
+
+                <button className={css.nextButton}
+                        onClick={() => setQuery(query => ({page: +query.get('page') + 1}))}>&rarr;</button>
             </div>
         </div>
     );

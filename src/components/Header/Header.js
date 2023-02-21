@@ -9,8 +9,6 @@ const Header = () => {
     return (
         <div className={css.Header}>
             <NavLink to={'/movies'}>HOME</NavLink>
-
-            <Genres/>
             <div>
                 <div className={css.user}>
 

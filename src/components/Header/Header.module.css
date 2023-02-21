@@ -1,13 +1,23 @@
 .Header {
-    height: 100px;
+    height: 70px;
     background-color: dimgrey;
     margin-bottom: 20px;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 24px;
     display: flex;
     align-items: center;
     padding-left: 100px;
+    border-radius: 5px;
+    z-index: 2;
+    box-sizing: border-box;
 }
+
+.Header a {
+    text-decoration: none;
+    color: black;
+    -o-box-shadow: goldenrod;
+}
+
 
 .user{
     width: 60px;
