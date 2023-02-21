@@ -7,11 +7,11 @@
     margin: 20px;
     margin-top: 40px;
     box-sizing: border-box;
-    box-shadow: 2px 2px 2px 2px chocolate;
+    /*box-shadow: 2px 2px 2px 2px chocolate;*/
 }
 .card:hover{
-    box-shadow: 2px 2px 2px 2px goldenrod;
-    background-color: midnightblue;
+    box-shadow: 1px 1px 1px 1px dimgrey;
+    background-color: darkslategrey;
     cursor:cell;
 
 }
@@ -37,11 +37,12 @@
     font-family: Rockwell;
     cursor: pointer;
     margin-top: 10px;
+    color: g;
 }
 
 .getSimilarButton:hover{
     background-color: black;
-    color: gold;
-    border: 2px solid darkgoldenrod;
+    color: green;
+    border: 2px solid darkslategrey;
 }
 
