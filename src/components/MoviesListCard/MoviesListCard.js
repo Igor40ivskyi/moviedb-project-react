@@ -29,15 +29,19 @@ const MoviesListCard = ({movie}) => {
     };
 
     return (
-        <div onClick={info} className={css.card}>
+        <div >
 
-            <div className={css.titleBlock}>{original_title}</div>
-            <div>
-                <PosterPreview key={id} poster_path={poster_path}/>
-            </div>
-            <div>
+            <div onClick={info} className={css.card}>
+                <div className={css.titleBlock}>{original_title}</div>
+                <div>
+                    <PosterPreview key={id} poster_path={poster_path}/>
+                </div>
+                <div>
                     <ReactStars count={10} size={27} value={vote_average}/>
+                </div>
+
             </div>
+
             <button className={css.getSimilarButton} onClick={() => similarGenres(id)}>GET SIMILAR MOVIES</button>
         </div>
     );

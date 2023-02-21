@@ -27,7 +27,6 @@ const Genre = ({genre}) => {
 
     return (
         <div onClick={getSimilarGenres} className={css.genreBlock}>
-
             {name}
         </div>
     );

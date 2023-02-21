@@ -8,3 +8,11 @@
     align-items: center;
     padding-left: 100px;
 }
+
+.user{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: green;
+    margin-left: 500px;
+}
