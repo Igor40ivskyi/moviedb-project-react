@@ -2,7 +2,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 import {moviesActions} from "../../redux/slices/moviesSlice";
 import {MovieInfoFullData} from "../MovieInfoFullData/MovieInfoFullData";
-import YouTube from "react-youtube";
+import {Trailer} from "../Trailer/Trailer";
 
 
 const MovieInfo = () => {
@@ -11,7 +11,6 @@ const MovieInfo = () => {
 
     const {movieById,videosByMovieId} = useSelector(state => state.movies);
 
-    console.log(videosByMovieId);
 
 
     const dispatch = useDispatch();
@@ -24,7 +23,7 @@ const MovieInfo = () => {
         <div>
             MovieInfo
             <div>
-                <YouTube />
+                {videosByMovieId && <Trailer videosByMovieId={videosByMovieId}/>}
             </div>
 
             <div>
