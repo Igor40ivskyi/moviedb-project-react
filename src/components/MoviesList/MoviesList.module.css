@@ -7,12 +7,29 @@
 }
 
 .prevButton {
-    margin: 200px;
-    font-size: 20px;
+    margin-left: 200px;
+    font-size: 24px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+     color: orange;
+background-color: black;
+    width: 120px;
 
-    width: 100px;
 }
 
 .nextButton{
+font-size: 20px;
+    width: 100px;
+    background-color: black;
+    color: orange;
+}
 
+.prevButton:hover{
+    background-color: black;
+    border: 2px solid gold;
+}
+
+.prevButton:active{
+    background-color: goldenrod;
+    color: green;
 }

@@ -8,6 +8,8 @@ const Genres = () => {
 
     const {genres} = useSelector(state => state.genres);
 
+    console.log(genres);
+
     const genresList = genres.genres;
 
     const dispatch = useDispatch();

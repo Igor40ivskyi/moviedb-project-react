@@ -8,7 +8,7 @@ import {NavLink} from "react-router-dom";
 const Header = () => {
     return (
         <div className={css.Header}>
-            <NavLink to={'/home'}>HOME</NavLink>
+            <NavLink to={'/movies'}>HOME</NavLink>
 
             <Genres/>
             <div>
