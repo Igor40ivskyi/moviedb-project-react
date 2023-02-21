@@ -2,15 +2,15 @@ import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import {genresService} from "../../services/genresService";
 
 const initialState={
-    genres: [],
-    moviesByGenre:null,
+    genresList: [],
+    moviesByGenreId:null,
     errors: null,
     loading: null,
 
 };
 
-const getAllGenres = createAsyncThunk(
-    'genresSlice/getAllGenres',
+const getGenresList = createAsyncThunk(
+    'genresSlice/getGenresList',
     async (_, {rejectWithValue}) => {
         try {
             const {data} = await genresService.getAll();
@@ -21,12 +21,12 @@ const getAllGenres = createAsyncThunk(
     });
 
 
-const getMoviesByGenre = createAsyncThunk(
+const getMoviesByGenreId = createAsyncThunk(
     'genresSlice/getMoviesByGenre',
     async ({id}, {rejectWithValue}) => {
 
         try {
-            const {data} = await genresService.getMoviesByGenre(id);
+            const {data} = await genresService.getMoviesByGenreId(id);
             return data;
         } catch (e) {
             return rejectWithValue(e.response.data);
@@ -39,18 +39,19 @@ const genresSlice = createSlice({
     reducers: {},
     extraReducers: (builder => {
         builder
-            .addCase(getAllGenres.fulfilled, (state, action) => {
-                state.genres = action.payload;
+            .addCase(getGenresList.fulfilled, (state, action) => {
+                state.genresList = action.payload.genres;
             })
-            .addCase(getMoviesByGenre.fulfilled, (state, action) => {
-                const {page, results} = action.payload;
-                state.moviesByGenre = results;
+            .addCase(getMoviesByGenreId.fulfilled, (state, action) => {
+                console.log(action.payload);
+                state.moviesByGenreId = action.payload;
+
             });
     }),
 });
 
 const {reducer: genresReducer, actions: {}} = genresSlice;
 
-const genresActions = {getAllGenres,getMoviesByGenre};
+const genresActions = {getGenresList,getMoviesByGenreId};
 
 export {genresActions, genresReducer};

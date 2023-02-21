@@ -7,17 +7,13 @@ import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
 import css from './MoviesList.module.css'
 
 import {useSearchParams} from "react-router-dom";
+import {GenresList} from "../GenresList/GenresList";
 
 const MoviesList = () => {
 
     const dispatch = useDispatch();
 
-
     const {moviesList,page} = useSelector(state => state.movies);
-
-
-    const {genres} = useSelector(state => state.genres);
-
 
     const [query,setQuery] = useSearchParams({page: '1'});
 
@@ -38,7 +34,7 @@ const MoviesList = () => {
                     {moviesList && moviesList.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}
                 </div>
                 <div>
-
+                    <GenresList/>
                 </div>
             </div>
 

@@ -1,0 +1,17 @@
+.nameOfGenre{
+    color: snow;
+    font-size: 20px;
+    margin-top: 20px;
+    width: 200px;
+    height: 30px;
+    background-color: gray;
+    font-weight: 600;
+    padding-left: 20px;
+    color: black;
+    font-family: Rockwell;
+}
+
+.nameOfGenre:hover{
+    color: darkgreen;
+    cursor: pointer;
+}
