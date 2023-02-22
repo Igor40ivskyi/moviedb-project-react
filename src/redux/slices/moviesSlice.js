@@ -7,6 +7,7 @@ const initialState = {
     similarMovies:[],
     movieById: null,
     videosByMovieId: null,
+    moviesByKeyword: null,
     errors: null,
     loading: null,
 
@@ -57,6 +58,19 @@ const getVideoByMovieId = createAsyncThunk(
     }
 );
 
+const getMoviesByKeyword = createAsyncThunk(
+    'moviesSlice/getMoviesByKeyword',
+    async ({keyword}, {rejectedWithValue}) => {
+        try {
+            const {data} = await moviesService.getMoviesByKeyWord(keyword);
+            return data;
+        } catch (e) {
+            return rejectedWithValue(e.response.data);
+
+        }
+    }
+);
+
 let moviesSlice = createSlice({
     name: 'moviesSlice',
     initialState,
@@ -79,12 +93,17 @@ let moviesSlice = createSlice({
             })
             .addCase(getVideoByMovieId.fulfilled, (state, action) => {
                 state.videosByMovieId = action.payload;
+            })
+            .addCase(getMoviesByKeyword.fulfilled, (state, action) => {
+                // console.log(action.payload);
+                const {results} = action.payload
+                state.moviesByKeyword = results
             });
     }),
 });
 
 const {reducer: moviesReducer, actions: {}} = moviesSlice;
 
-const moviesActions = {getAllMovies, getSimilarMovies,getMovieById,getVideoByMovieId};
+const moviesActions = {getAllMovies, getSimilarMovies,getMovieById,getVideoByMovieId,getMoviesByKeyword};
 
 export {moviesReducer, moviesActions};
