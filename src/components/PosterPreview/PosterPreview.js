@@ -1,3 +1,5 @@
+import css from '../MoviesListCard/MoviesListCard.module.css'
+
 const PosterPreview = ({poster_path}) => {
 
     // const FirstHalfOfPoster = 'https://image.tmdb.org/t/p/w500';
@@ -6,7 +8,7 @@ const PosterPreview = ({poster_path}) => {
 
     return (
         <div>
-            <img style={{maxWidth:'100%',maxHeight:'400px'}} src={fullPoster} alt="moviePoster"/>
+            <img className={css.picture} src={fullPoster} alt="moviePoster"/>
         </div>
     );
 };

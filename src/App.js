@@ -16,7 +16,6 @@ const App = () => {
                 <Route index element={<Navigate to={'movies'}/>}/>
                 <Route path={'movies'} element={<MoviesList/>}/>
                 <Route path={'similar'} element={<SimilarMovies/>}/>
-                <Route path={'rating'} element={<StarsRating/>}/>
                 <Route path={'info'} element={<MovieInfo/>}/>
                 <Route path={'moviesByGenre'} element={<MoviesByGenreIdList/>}/>
             </Route>
