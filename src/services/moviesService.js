@@ -10,6 +10,8 @@ const moviesService = {
 
     getVideoByMovieId: (movie_id) => apiService.get(`/movie/${movie_id}/videos`),
 
+    getMoviesByKeyWord: (query = 'power') => apiService.get(`/search/movie`, {params: {query}}),
+
 };
 
 export {moviesService};
