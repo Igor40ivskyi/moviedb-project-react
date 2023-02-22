@@ -7,7 +7,7 @@ const initialState = {
     similarMovies:[],
     movieById: null,
     videosByMovieId: null,
-    moviesByKeyword: null,
+    moviesByKeyword: [],
     errors: null,
     loading: null,
 

@@ -25,11 +25,24 @@ const MoviesList = () => {
     }, [query]);
 
     const searchMovies = () => {
-          const keyword = ref.current.value
-        dispatch(moviesActions.getMoviesByKeyword({keyword}))
+
+        if(!isSearched) {
+            setIsSearched(true);
+
+            setTimeout(() => {
+                setIsSearched(false);
+            }, 1000);
+        }
+            const keyword = ref.current.value
+
+            dispatch(moviesActions.getMoviesByKeyword({keyword}))
     };
 
     const divLable = useRef();
+
+
+    const [isSearched, setIsSearched] = useState(false);
+
 
 
     return (
@@ -41,12 +54,12 @@ const MoviesList = () => {
             </div>
 
             <div>
-                {moviesByKeyword && <div>
+                {/*{moviesByKeyword.length && <div>*/}
                     {
-                        moviesByKeyword.length === 0
+                       !moviesByKeyword.length && isSearched
 
                             ?
-                            < div ref={divLable}
+                            <div ref={divLable}
                                   style={{color: "snow", width: '100%', textAlign: 'center', paddingTop: 50}}>
                                 PLEASE ENTER SOME CORRECT KEYWORD
                             </div>
@@ -57,8 +70,8 @@ const MoviesList = () => {
                             </div>
                     }
 
-                </div>
-                }
+                {/*</div>*/}
+                {/*}*/}
 
 
             </div>
