@@ -9,7 +9,7 @@ const Header = () => {
             <NavLink to={'/movies'}>HOME</NavLink>
             <div>
                 <div className={css.user}>
-
+                    J
                 </div>
             </div>
         </div>

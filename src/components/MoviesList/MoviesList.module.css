@@ -12,36 +12,38 @@
     margin-bottom: 100px;
 
     font-size: 24px;
-     color: orange;
+     color: dimgray;
     width: 120px;
     background-color: black;
-border-radius: 5px;
-    border: 2px solid darkgoldenrod;
+    border-radius: 5px;
+    border: 1px solid gray;
 }
 
 .nextButton{
     font-size: 24px;
-    color: orange;
+    color: dimgray;
     width: 120px;
     background-color: black;
     border-radius: 5px;
-    border: 2px solid darkgoldenrod;
+    border: 1px solid gray;
 }
 
 .prevButton:hover{
     background-color: black;
-    border: 2px solid gold;
+    border: 2px solid dimgray;
 }
 
 .nextButton:hover{
     background-color: black;
-    border: 2px solid gold;
+    border: 2px solid dimgray;
 }
 .prevButton:active{
-    background-color: gold;
+    background-color: dimgray;
     color: black;
+    border: 2px solid black
 }
 .nextButton:active{
-    background-color: gold;
+    background-color: dimgray;
     color: black;
+    border: 2px solid black
 }

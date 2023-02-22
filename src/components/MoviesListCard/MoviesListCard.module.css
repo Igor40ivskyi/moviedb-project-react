@@ -15,6 +15,9 @@
     cursor:cell;
 
 }
+.card:active{
+    box-shadow: 1px 1px 1px 1px darkgreen;
+}
 
 .titleBlock {
     height: 70px;
