@@ -31,6 +31,17 @@ const MoviesList = () => {
         dispatch(moviesActions.getMoviesByKeyword({keyword}))
     };
 
+    const divLable = useRef();
+
+
+
+    useEffect(() => {
+        setTimeout(() => {
+
+            }
+            ,2000);
+    },[]);
+
     return (
         <div>
             <div>
@@ -39,9 +50,34 @@ const MoviesList = () => {
                 <button onClick={searchMovies}>search</button>
             </div>
 
-            {moviesByKeyword && <div style={{height:500}}>
-                {moviesByKeyword && moviesByKeyword.map(movie => <FoundMovies key={movie.id} movie={movie}/>)}
-            </div>}
+            <div>
+                {moviesByKeyword && <div>
+                    {
+                        moviesByKeyword.length === 0
+                            ?
+                            <div ref={divLable} style={{color:"snow",width:'100%',textAlign:'center',paddingTop:50}}>
+                                PLEASE ENTER SOME CORRECT KEYWORD
+                            </div>
+                            :
+                            <div>
+                                {moviesByKeyword.map(movie => <FoundMovies key={movie.id} movie={movie}/>)}
+                            </div>
+                    }
+
+                </div>
+                }
+
+
+            </div>
+
+
+            {/*{moviesByKeyword &&  <div style={{color:'snow'}}>*/}
+            {/*    {moviesByKeyword.length === 0 ? 'ENTER WORD'*/}
+            {/*       : moviesByKeyword.map(movie => <FoundMovies key={movie.id} movie={movie}/>)}*/}
+            {/*         */}
+            {/*</div> }*/}
+
+
 
             <div style={{display: 'flex'}}>
 

@@ -65,6 +65,7 @@ const getMoviesByKeyword = createAsyncThunk(
             const {data} = await moviesService.getMoviesByKeyWord(keyword);
             return data;
         } catch (e) {
+            console.log(e.response.data);
             return rejectedWithValue(e.response.data);
 
         }
@@ -95,7 +96,7 @@ let moviesSlice = createSlice({
                 state.videosByMovieId = action.payload;
             })
             .addCase(getMoviesByKeyword.fulfilled, (state, action) => {
-                // console.log(action.payload);
+                console.log(action.payload);
                 const {results} = action.payload
                 state.moviesByKeyword = results
             });
