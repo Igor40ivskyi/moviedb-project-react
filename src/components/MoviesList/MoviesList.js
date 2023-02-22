@@ -17,7 +17,6 @@ const MoviesList = () => {
     const dispatch = useDispatch();
 
     const {moviesList,page,moviesByKeyword} = useSelector(state => state.movies);
-    console.log(moviesByKeyword);
 
     const [query,setQuery] = useSearchParams({page: '1'});
 
@@ -27,20 +26,11 @@ const MoviesList = () => {
 
     const searchMovies = () => {
           const keyword = ref.current.value
-        console.log(keyword);
         dispatch(moviesActions.getMoviesByKeyword({keyword}))
     };
 
     const divLable = useRef();
 
-
-
-    useEffect(() => {
-        setTimeout(() => {
-
-            }
-            ,2000);
-    },[]);
 
     return (
         <div>
@@ -54,10 +44,13 @@ const MoviesList = () => {
                 {moviesByKeyword && <div>
                     {
                         moviesByKeyword.length === 0
+
                             ?
-                            <div ref={divLable} style={{color:"snow",width:'100%',textAlign:'center',paddingTop:50}}>
+                            < div ref={divLable}
+                                  style={{color: "snow", width: '100%', textAlign: 'center', paddingTop: 50}}>
                                 PLEASE ENTER SOME CORRECT KEYWORD
                             </div>
+
                             :
                             <div>
                                 {moviesByKeyword.map(movie => <FoundMovies key={movie.id} movie={movie}/>)}
@@ -76,7 +69,6 @@ const MoviesList = () => {
             {/*       : moviesByKeyword.map(movie => <FoundMovies key={movie.id} movie={movie}/>)}*/}
             {/*         */}
             {/*</div> }*/}
-
 
 
             <div style={{display: 'flex'}}>
