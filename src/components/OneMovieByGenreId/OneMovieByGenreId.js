@@ -6,7 +6,6 @@ const OneMovieByGenreId = ({movieByGenreId}) => {
 
     const {id, original_language, original_title, poster_path, vote_average} = movieByGenreId;
 
-    console.log(movieByGenreId);
 
     return (
         <div>

@@ -12,7 +12,7 @@ const OneGenre = ({genre}) => {
 
     const getMoviesByGenreId = () => {
         dispatch(genresActions.getMoviesByGenreId({id}))
-        navigate('/moviesByGenre');
+        navigate(`/moviesByGenre?genreId=${id}`);
     };
 
     return (

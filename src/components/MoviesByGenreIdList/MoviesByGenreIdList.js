@@ -1,10 +1,23 @@
 import css from './MoviesByGenreIdList.module.css'
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {OneMovieByGenreId} from "../OneMovieByGenreId/OneMovieByGenreId";
+import {useSearchParams} from "react-router-dom";
+import {useEffect} from "react";
+import {genresActions} from "../../redux/slices/genresSlice";
 
 const MoviesByGenreIdList = () => {
 
     const {moviesByGenreId} = useSelector(state => state.genres);
+
+    const [query,setQuery] = useSearchParams({genreId: 35});
+
+    const id = +query.get('genreId');
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(genresActions.getMoviesByGenreId({id}))
+    },[]);
 
     return (
         <div className={css.moviesListBlock}>
