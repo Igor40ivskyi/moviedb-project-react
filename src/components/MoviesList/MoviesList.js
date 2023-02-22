@@ -1,5 +1,5 @@
 import {useDispatch, useSelector} from "react-redux";
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
 import {moviesActions} from "../../redux/slices/moviesSlice";
 import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
@@ -10,6 +10,10 @@ import {useSearchParams} from "react-router-dom";
 import {GenresList} from "../GenresList/GenresList";
 
 const MoviesList = () => {
+
+    const ref = useRef();
+
+
 
     const dispatch = useDispatch();
 
@@ -26,8 +30,16 @@ const MoviesList = () => {
     },[query]);
 
 
+    const searchMovies = () => {
+        console.log(ref.current.value);
+    };
+
     return (
         <div>
+            <div>
+                <input style={{width:800,height:25,marginLeft:400,marginTop:50}} type="text" placeholder={'search'} ref={ref}/>
+            <button onClick={searchMovies}>search</button>
+            </div>
             <div style={{display:'flex'}}>
 
                 <div className={css.moviesListBlock}>

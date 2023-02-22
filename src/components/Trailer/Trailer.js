@@ -11,7 +11,9 @@ const Trailer = ({videosByMovieId}) => {
     console.log(video);
     return (
         <div>
-            {video.key && <YouTube  videoId={video.key}/>}
+            {video? <YouTube  videoId={video.key}/>:<div style={{color:'snow'}}>
+                "Sorry there is no trailer for this movie"
+            </div>}
         </div>
     );
 };
