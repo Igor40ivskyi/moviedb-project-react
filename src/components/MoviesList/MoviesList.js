@@ -60,7 +60,7 @@ const MoviesList = () => {
 
                             ?
                             <div
-                                  style={{color: "snow", width: '100%',paddingLeft:545,marginTop:50,fontFamily:'Arial',
+                                  style={{color: "snow", width: 1000,paddingLeft:530,marginLeft:10,marginTop:50,fontFamily:'Arial',
                                   fontSize:20
                                   }}>
                                 PLEASE ENTER SOME CORRECT KEYWORD
