@@ -65,7 +65,7 @@ const MoviesList = () => {
                             </div>
 
                             :
-                            <div>
+                            <div className={css.foundMoviesBlock}>
                                 {moviesByKeyword.map(movie => <FoundMovies key={movie.id} movie={movie}/>)}
                             </div>
                     }
