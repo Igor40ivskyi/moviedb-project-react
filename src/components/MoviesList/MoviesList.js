@@ -38,7 +38,7 @@ const MoviesList = () => {
             dispatch(moviesActions.getMoviesByKeyword({keyword}))
     };
 
-    const divLable = useRef();
+    // const divLable = useRef();
 
 
     const [isSearched, setIsSearched] = useState(false);
@@ -59,7 +59,7 @@ const MoviesList = () => {
                        !moviesByKeyword.length && isSearched
 
                             ?
-                            <div ref={divLable}
+                            <div
                                   style={{color: "snow", width: '100%', textAlign: 'center', paddingTop: 50}}>
                                 PLEASE ENTER SOME CORRECT KEYWORD
                             </div>
