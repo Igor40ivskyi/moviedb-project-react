@@ -35,11 +35,10 @@ const MoviesList = () => {
         }
             const keyword = ref.current.value
 
-            dispatch(moviesActions.getMoviesByKeyword({keyword}))
+        console.log(keyword);
+        dispatch(moviesActions.getMoviesByKeyword({keyword}))
     };
-
-    // const divLable = useRef();
-
+    
 
     const [isSearched, setIsSearched] = useState(false);
 

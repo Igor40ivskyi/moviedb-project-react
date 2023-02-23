@@ -5,7 +5,7 @@ const Trailer = ({videosByMovieId}) => {
 
     const results = videosByMovieId.results;
 
-    console.log(results);
+    // console.log(results);
     const video = results[0];
 
     console.log(video);
