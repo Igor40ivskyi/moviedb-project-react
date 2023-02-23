@@ -4,6 +4,7 @@ import {moviesActions} from "../../redux/slices/moviesSlice";
 import {MovieInfoFullData} from "../MovieInfoFullData/MovieInfoFullData";
 import {Trailer} from "../Trailer/Trailer";
 
+import css from './MovieInfo.module.css'
 
 const MovieInfo = () => {
     const id = localStorage.getItem('pickedMovieId');
@@ -21,8 +22,8 @@ const MovieInfo = () => {
     },[]);
     return (
         <div>
-            MovieInfo
-            <div>
+
+            <div className={css.trailerBlock} >
                 {videosByMovieId && <Trailer videosByMovieId={videosByMovieId}/>}
             </div>
 

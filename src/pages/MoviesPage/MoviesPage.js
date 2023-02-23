@@ -4,7 +4,7 @@ import {Outlet} from "react-router-dom";
 
 const MoviesPage = () => {
     return (
-        <div style={{background:'black'}}>
+        <div style={{background:'snow'}}>
             <Header/>
 
             <Outlet/>
