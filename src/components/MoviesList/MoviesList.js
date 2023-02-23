@@ -48,19 +48,21 @@ const MoviesList = () => {
     return (
         <div>
             <div>
-                <input style={{width: 800, height: 25, marginLeft: 400, marginTop: 50}} type="text"
+                <input style={{width: 800, height: 25, marginLeft: 340, marginTop: 50,fontSize:20}} type="text"
                        placeholder={'search'} ref={ref}/>
-                <button onClick={searchMovies}>search</button>
+                <button style={{width:100,fontSize:20}} onClick={searchMovies}>look up</button>
             </div>
 
-            <div>
-                {/*{moviesByKeyword.length && <div>*/}
+            <div style={{minHeight:60}}>
+
                     {
                        !moviesByKeyword.length && isSearched
 
                             ?
                             <div
-                                  style={{color: "snow", width: '100%', textAlign: 'center', paddingTop: 50}}>
+                                  style={{color: "snow", width: '100%',paddingLeft:545,marginTop:50,fontFamily:'Arial',
+                                  fontSize:20
+                                  }}>
                                 PLEASE ENTER SOME CORRECT KEYWORD
                             </div>
 
@@ -69,9 +71,6 @@ const MoviesList = () => {
                                 {moviesByKeyword.map(movie => <FoundMovies key={movie.id} movie={movie}/>)}
                             </div>
                     }
-
-                {/*</div>*/}
-                {/*}*/}
 
 
             </div>
@@ -94,12 +93,13 @@ const MoviesList = () => {
                 </div>
             </div>
 
-            <div>
+            <div style={{width:'100%',marginTop:50,marginBottom:20}}>
                 <button className={css.prevButton} disabled={page === 1}
                         onClick={() => setQuery(query => ({page: +query.get('page') - 1}))}>&larr;</button>
 
                 <button className={css.nextButton}
                         onClick={() => setQuery(query => ({page: +query.get('page') + 1}))}>&rarr;</button>
+
             </div>
         </div>
     );

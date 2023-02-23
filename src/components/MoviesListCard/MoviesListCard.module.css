@@ -1,7 +1,7 @@
 .card {
     height: 490px;
     width: 250px;
-    background-color: black;
+    /*background-color: black;*/
     color: snow;
 
     margin: 20px;
@@ -30,9 +30,10 @@
     align-items: center;
     font-family: Bahnschrift;
     font-weight: 600;
+    background: inherit;
 }
 .titleBlock:hover {
-    color: snow;
+    color: darkslategrey;
 
 }
 

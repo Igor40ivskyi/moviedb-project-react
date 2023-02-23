@@ -14,7 +14,7 @@
     font-size: 24px;
      color: dimgray;
     width: 120px;
-    background-color: black;
+    background-color: inherit;
     border-radius: 5px;
     border: 1px solid gray;
 }
@@ -24,19 +24,21 @@
     font-size: 24px;
     color: dimgray;
     width: 120px;
-    background-color: black;
+    background-color: inherit;
     border-radius: 5px;
     border: 1px solid gray;
 }
 
 .prevButton:hover{
-    background-color: black;
-    border: 2px solid dimgray;
+    /*background-color: black;*/
+    /*border: 2px solid dimgray;*/
+    cursor: pointer;
 }
 
 .nextButton:hover{
-    background-color: black;
-    border: 2px solid dimgray;
+    /*background-color: black;*/
+    /*border: 2px solid dimgray;*/
+    cursor: pointer;
 }
 .prevButton:active{
     background-color: dimgray;

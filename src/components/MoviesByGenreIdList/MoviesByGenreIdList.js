@@ -20,8 +20,8 @@ const MoviesByGenreIdList = () => {
     },[]);
 
     return (
-        <div >
-            MoviesByGenreIdList
+        <div style={{display:'flex',justifyContent:'center'}} >
+
             <div className={css.moviesListBlock}>
                 {moviesByGenreId && moviesByGenreId.map(movieByGenreId=><OneMovieByGenreId key={movieByGenreId.id} movieByGenreId={movieByGenreId}/>)}
             </div>
