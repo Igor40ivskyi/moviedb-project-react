@@ -12,9 +12,11 @@ const FoundMovies = ({movie}) => {
 
     return (
         <div className={css.FoundMoviesCard}>
-            {original_title}
+            <div className={css.FoundMoviesTitleBlock}>
+                {original_title}
+            </div>
             <div>
-                <img style={{width: 200, height: 250}} src={fullPoster} alt={original_title}/>
+                <img style={{width: 200, maxHeight: 250,borderRadius:5}} src={fullPoster} alt={original_title}/>
             </div>
         </div>
     );

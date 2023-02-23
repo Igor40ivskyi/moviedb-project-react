@@ -1,8 +1,20 @@
-.FoundMoviesCard{
-    border: 2px solid darkred;
-    height: 300px;
+.FoundMoviesCard {
+    /*border: 2px solid darkred;*/
+    height: 350px;
     width: 200px;
     color: snow;
-    margin:10px
+    margin: 10px;
+    border-radius: 5px;
+    /*box-shadow: 1px 1px 1px 2px lightcoral;*/
+}
+
+
+
+.FoundMoviesTitleBlock {
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Bahnschrift;
 
 }
