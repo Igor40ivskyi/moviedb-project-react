@@ -4,7 +4,7 @@ const PosterPreviewByGenreId = ({poster_path}) => {
 
     return (
         <div>
-            <img src={fullPoster} alt="moviePoster"/>
+            <img style={{height:350,width:250}} src={fullPoster} alt="moviePoster"/>
         </div>
 
     );

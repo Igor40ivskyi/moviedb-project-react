@@ -1,3 +1,14 @@
-.moviesListBlock{
-    color:snow;
+.moviesListBlock {
+    color: snow;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1500px;
+    background-color: gray;
+    justify-content: center;
+}
+
+.moviesByGenreCard{
+    height: 400px;
+    width: 300px;
+    background-color: lightcoral;
 }
