@@ -1,14 +1,14 @@
 import React, {useContext} from 'react';
 
-import css from './Header.module.css';
+import './Header.module.css';
 import {NavLink} from "react-router-dom";
 
 const Header = () => {
 
 
     return (
-        <div className={css.Header}>
-            <div className={css.linkPack}>
+        <div className={"Header"}>
+            <div className={"linkPack"}>
                 <div style={{width:200}}>
                     <NavLink to={'/movies'}>HOME</NavLink>
                 </div>
@@ -21,7 +21,7 @@ const Header = () => {
             </div>
 
             <div>
-                <div className={css.user}>
+                <div className={"user"}>
                     J
                 </div>
             </div>
