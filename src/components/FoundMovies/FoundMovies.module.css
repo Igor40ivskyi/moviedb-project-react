@@ -2,10 +2,12 @@
     /*border: 2px solid darkred;*/
     height: 350px;
     width: 200px;
-    color: snow;
+    color: black;
     margin: 10px;
     border-radius: 5px;
     /*box-shadow: 1px 1px 1px 2px lightcoral;*/
+    /*border: 2px solid #272727;*/
+    background-color: #cecaca;
 }
 
 
@@ -16,5 +18,7 @@
     justify-content: center;
     align-items: center;
     font-family: Bahnschrift;
+    font-size: 19px;
+    /*border: 2px solid black;*/
 
 }

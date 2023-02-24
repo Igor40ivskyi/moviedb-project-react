@@ -53,7 +53,7 @@ const MoviesList = () => {
                 </button>
             </div>
 
-            <div style={{minHeight: 60}}>
+            <div style={{minHeight: 60,display:'flex',justifyContent:'center',alignItems:'center'}}>
 
                 {
                     !moviesByKeyword.length && isSearched
