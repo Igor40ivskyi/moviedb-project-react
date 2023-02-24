@@ -1,0 +1,11 @@
+#light{
+    background: #e3a094;
+}
+
+#dark{
+    background: #1a1a34;
+}
+
+#light.Header{
+    background: green;
+}

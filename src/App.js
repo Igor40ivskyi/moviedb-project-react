@@ -4,23 +4,38 @@ import {Navigate, Route, Routes} from "react-router-dom";
 import {SimilarMovies} from "./components/SimilarMovies/SimilarMovies";
 import {MovieInfo, StarsRating} from "./components";
 import {MoviesByGenreIdList} from "./components/MoviesByGenreIdList/MoviesByGenreIdList";
+import {NotFoundPage} from "./pages/NotFoundPage/NotFoundPage";
+import {createContext, useState} from "react";
+
+export const ThemeContext = createContext(null);
+
 
 const App = () => {
+
+    const [theme, setTheme] = useState("dark");
+
+
+    const toggleTheme = () => {
+        setTheme((curr) => (curr === "light" ? "dark" : "light"));
+    };
+
     return (
-        // <div>
-        //     <MoviesPage/>
-        // </div>
-        <Routes>
-            <Route path={'/'} element={<MoviesPage/>}>
+        <ThemeContext.Provider value={{theme, toggleTheme}}>
+            <Routes>
+                <Route path={'/'} element={<MoviesPage/>}>
 
-                <Route index element={<Navigate to={'movies'}/>}/>
-                <Route path={'movies'} element={<MoviesList/>}/>
-                <Route path={'similar'} element={<SimilarMovies/>}/>
-                <Route path={'info'} element={<MovieInfo/>}/>
-                <Route path={'moviesByGenre'} element={<MoviesByGenreIdList/>}/>
-            </Route>
+                    <Route index element={<Navigate to={'movies'}/>}/>
+                    <Route path={'movies'} element={<MoviesList/>}/>
+                    <Route path={'similar'} element={<SimilarMovies/>}/>
+                    <Route path={'info'} element={<MovieInfo/>}/>
+                    <Route path={'moviesByGenre'} element={<MoviesByGenreIdList/>}/>
+                </Route>
 
-        </Routes>
+                <Route path={'*'} element={<NotFoundPage/>}/>
+            </Routes>
+        </ThemeContext.Provider>
+
+
     );
 };
 
