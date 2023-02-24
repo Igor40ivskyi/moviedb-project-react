@@ -11,6 +11,7 @@ import './MoviesPage.css'
 const MoviesPage = () => {
 
     const {theme} = useContext(ThemeContext);
+
     console.log(theme);
 
     return (

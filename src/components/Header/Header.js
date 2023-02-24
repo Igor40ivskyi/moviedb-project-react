@@ -1,10 +1,13 @@
 import React, {useContext} from 'react';
-
-import './Header.module.css';
 import {NavLink} from "react-router-dom";
+
+import ReactSwitch from "react-switch";
+import './Header.css';
+import {ThemeContext} from "../../App";
 
 const Header = () => {
 
+    const {theme,toggleTheme} = useContext(ThemeContext);
 
     return (
         <div className={"Header"}>
@@ -24,6 +27,10 @@ const Header = () => {
                 <div className={"user"}>
                     J
                 </div>
+            </div>
+            <div className={'switch'}>
+                <label>{theme === 'light'?'Light Mode':'Dark Mode'}</label>
+                <ReactSwitch onChange={toggleTheme} checked={theme === 'dark'}  />
             </div>
         </div>
     );

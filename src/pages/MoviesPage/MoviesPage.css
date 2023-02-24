@@ -10,45 +10,11 @@
     background: green;
 }
 
-.Header {
-    height: 70px;
-    /*background: dimgrey;*/
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    padding-left: 100px;
-    border-radius: 5px;
-    z-index: 2;
-    box-sizing: border-box;
+#light .switch{
+    color: darkred;
 }
 
-.linkPack {
-    width: 1400px;
-    display: flex;
-    justify-content: space-around;
-
-}
-.Header a {
-    text-decoration: none;
-    color: black;
-    font-family: Bahnschrift;
+#dark .switch{
+    color: darkblue;
 }
 
-.Header a[class='active']{
-    color:snow;
-}
-
-.user{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: black;
-    margin-left: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: darkgreen;
-
-}
