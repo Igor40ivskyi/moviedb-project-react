@@ -1,11 +1,13 @@
 .moviesListBlock {
-    color: snow;
+    color: black;
     display: flex;
     flex-wrap: wrap;
     width: 1500px;
     /*background-color: gray;*/
     justify-content: center;
     margin-top: 50px;
+    /*background-color: darkgreen;*/
+
 }
 
 .moviesByGenreCard{

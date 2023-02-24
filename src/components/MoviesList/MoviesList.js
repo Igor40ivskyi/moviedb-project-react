@@ -4,7 +4,7 @@ import {useEffect, useRef, useState} from "react";
 import {moviesActions} from "../../redux/slices/moviesSlice";
 import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
 
-import css from './MoviesList.module.css'
+import './MoviesList.css'
 
 import {useSearchParams} from "react-router-dom";
 import {GenresList} from "../GenresList/GenresList";
@@ -43,33 +43,33 @@ const MoviesList = () => {
     const [isSearched, setIsSearched] = useState(false);
 
 
-
     return (
         <div>
             <div>
-                <input style={{width: 800, marginLeft: 330, marginTop: 50,fontSize:20}} type="text"
+                <input style={{width: 800, marginLeft: 330, marginTop: 50, fontSize: 20}} type="text"
                        placeholder={'search'} ref={ref}/>
-                <button style={{width:100,fontSize:20,color:'black',fontWeight:600}} onClick={searchMovies}>look up</button>
+                <button style={{width: 100, fontSize: 20, color: 'black', fontWeight: 600}} onClick={searchMovies}>look
+                    up
+                </button>
             </div>
 
-            <div style={{minHeight:60}}>
+            <div style={{minHeight: 60}}>
 
-                    {
-                       !moviesByKeyword.length && isSearched
+                {
+                    !moviesByKeyword.length && isSearched
 
-                            ?
-                            <div
-                                  style={{color: "snow", width: 1000,paddingLeft:510,marginLeft:10,marginTop:50,fontFamily:'Arial',
-                                  fontSize:20
-                                  }}>
-                                PLEASE ENTER SOME CORRECT KEYWORD
-                            </div>
+                        ?
+                        <div className={'correctWordBlock'}>
+                            PLEASE ENTER CORRECT KEYWORD
+                        </div>
 
-                            :
-                            <div className={css.foundMoviesBlock}>
+                        :
+                        <div className={"foundMoviesBlockWrap"}>
+                            <div className={"foundMoviesBlock"}>
                                 {moviesByKeyword.map(movie => <FoundMovies key={movie.id} movie={movie}/>)}
                             </div>
-                    }
+                        </div>
+                }
 
 
             </div>
@@ -84,7 +84,7 @@ const MoviesList = () => {
 
             <div style={{display: 'flex'}}>
 
-                <div className={css.moviesListBlock}>
+                <div className={"moviesListBlock"}>
                     {moviesList && moviesList.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}
                 </div>
                 <div>
@@ -92,11 +92,11 @@ const MoviesList = () => {
                 </div>
             </div>
 
-            <div style={{width:'100%',marginTop:50,marginBottom:20}}>
-                <button className={css.prevButton} disabled={page === 1}
+            <div style={{width: '100%', marginTop: 50, marginBottom: 20}}>
+                <button className={"prevButton"} disabled={page === 1}
                         onClick={() => setQuery(query => ({page: +query.get('page') - 1}))}>&larr;</button>
 
-                <button className={css.nextButton}
+                <button className={"nextButton"}
                         onClick={() => setQuery(query => ({page: +query.get('page') + 1}))}>&rarr;</button>
 
             </div>

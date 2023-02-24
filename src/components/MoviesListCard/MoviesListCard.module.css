@@ -38,7 +38,7 @@
     background: inherit;
 }
 .titleBlock:hover {
-    color: darkslategrey;
+    /*color: darkred;*/
 
 }
 
@@ -64,10 +64,10 @@
     max-width: 250px;
     max-height: 340px;
     border-radius: 6px;
-    box-shadow: 0px 0px 0px 2px dimgray;
+    box-shadow: 0px 0px 0px 1px grey;
 }
 .picture:hover{
-    box-shadow: 0px 0px 0px 2px grey;
-    zoom: unset;
-    max-width: 101%;
+    box-shadow: 0px 0px 0px 2px snow;
+    /*zoom: unset;*/
+    /*max-width: 101%;*/
 }

@@ -31,14 +31,17 @@
 }
 
 .user{
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    background-color: black;
-    margin-left: 150px;
+    background-color: darkred;
+
+    margin-left: 80px;
+    margin-right: 50px;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    color: darkgreen;
+    color: snow;
 
 }

@@ -23,14 +23,14 @@ const Header = () => {
                 </div>
             </div>
 
+            <div style={{width:190}} className={'switch'}>
+                <ReactSwitch onChange={toggleTheme} checked={theme === 'light'}/>
+                <label>{theme === 'light'?'Light Mode':'Dark Mode'}</label>
+            </div>
             <div>
                 <div className={"user"}>
-                    J
+                    R
                 </div>
-            </div>
-            <div className={'switch'}>
-                <label>{theme === 'light'?'Light Mode':'Dark Mode'}</label>
-                <ReactSwitch onChange={toggleTheme} checked={theme === 'dark'}  />
             </div>
         </div>
     );
