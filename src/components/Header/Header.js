@@ -16,7 +16,7 @@ const Header = () => {
                     <NavLink to={'/movies'}>HOME</NavLink>
                 </div>
                 <div style={{width:300}}>
-                    <NavLink to={'/info'}>MOVIE DETAILS</NavLink>
+                    <NavLink to={'/info'}>MOVIE ROOM</NavLink>
                 </div>
                 <div style={{width:400}}>
                     <NavLink to={'moviesByGenre'}>GENRE RELATED</NavLink>

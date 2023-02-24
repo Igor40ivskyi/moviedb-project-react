@@ -12,11 +12,11 @@ const MovieInfoFullData = ({movieById}) => {
 
 
     return (
-        <div style={{marginTop:250}}>
+        <div style={{marginTop:100}}>
             <div className={css.movie_info_card}>
 
                 <div>
-                    <img style={{height:600}} src={fullPoster} alt={original_title}/>
+                    <img style={{height:500}} src={fullPoster} alt={original_title}/>
                 </div>
 
                 <div className={css.textSection}>

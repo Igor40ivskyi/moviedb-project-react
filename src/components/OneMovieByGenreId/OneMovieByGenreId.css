@@ -1,5 +1,8 @@
 .card{
-    height: 00px;
-    width: 300px;
-    background-color: lightcoral;
+    height: 500px;
+    width: 250px;
+    /*background-color: lightcoral;*/
+    margin: 20px;
 }
+
+/*style={{background:'grey',margin:10,width:250,height:500}*/

@@ -10,12 +10,12 @@ const Trailer = ({videosByMovieId}) => {
 
     console.log(video);
     return (
-        <div style={{width: 1300, background: 'silver'}}>
+        <div style={{width: 900, background: 'black',marginTop:150}}>
             {
                 video
 
                     ?
-                    <YouTube containerClassName={css.videoTrailer} videoId={video.key} opts={{width:"100%",height:700}}/>
+                    <YouTube containerClassName={css.videoTrailer} videoId={video.key} opts={{width:"100%",height:600}}/>
 
                     :
                     <div style={{color: 'snow'}}>

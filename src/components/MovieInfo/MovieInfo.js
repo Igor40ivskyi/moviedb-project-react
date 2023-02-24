@@ -20,17 +20,20 @@ const MovieInfo = () => {
         dispatch(moviesActions.getMovieById({id}))
         dispatch(moviesActions.getVideoByMovieId({movie_id}))
     },[]);
+
     return (
         <div>
 
-            <div className={css.trailerBlock} >
+            <div className={css.trailerBlock}>
+
+                <div>
+
+                    {movieById && <MovieInfoFullData key={movieById.id} movieById={movieById}/>}
+                </div>
+
                 {videosByMovieId && <Trailer videosByMovieId={videosByMovieId}/>}
             </div>
 
-            <div>
-
-            {movieById && <MovieInfoFullData key={movieById.id} movieById={movieById}/>}
-            </div>
         </div>
     );
 };

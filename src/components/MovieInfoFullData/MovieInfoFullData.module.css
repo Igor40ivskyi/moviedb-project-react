@@ -1,22 +1,22 @@
 .movie_info_card{
     display: flex;
     margin-left: 10px;
-    margin-top: 100px;
-    margin-bottom: 50px;
+    /*margin-top: 100px;*/
+    /*margin-bottom: 50px;*/
 }
 
 
 
 .textSection{
     margin-left: 100px;
-    color: orange;
+    color: #cac4c4;
 
 }
 
 .textSectionSlice {
     margin: 10px;
     font-size: 24px;
-    font-family: Rockwell;
+    font-family: Arial;
     width: 500px;
 }
 

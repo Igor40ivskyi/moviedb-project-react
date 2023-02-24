@@ -1,7 +1,11 @@
 .trailerBlock {
     width: 100%;
-    height: 600px;
+    height: 1580px;
     /*border: 2px solid darkred;*/
     display: flex;
-    justify-content: center;
+    /*justify-content: space-between;*/
+    background-color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }

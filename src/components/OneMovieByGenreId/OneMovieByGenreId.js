@@ -2,6 +2,8 @@ import css from "../MoviesListCard/MoviesListCard.module.css";
 import {PosterPreviewByGenreId} from "../PosterPreviewByGenreId/PosterPreviewByGenreId";
 import ReactStars from "react-stars/dist/react-stars";
 
+import './OneMovieByGenreId.css'
+
 import style from './OneMovieByGenreId.css'
 const OneMovieByGenreId = ({movieByGenreId}) => {
 
@@ -9,7 +11,7 @@ const OneMovieByGenreId = ({movieByGenreId}) => {
 
 
     return (
-        <div style={{background:'coral',margin:10,width:250,height:500}}>
+        <div className={'card'} >
 
             <div className={css.titleBlock}>{original_title}</div>
 
