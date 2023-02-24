@@ -47,9 +47,9 @@ const MoviesList = () => {
     return (
         <div>
             <div>
-                <input style={{width: 800, height: 25, marginLeft: 330, marginTop: 50,fontSize:20}} type="text"
+                <input style={{width: 800, marginLeft: 330, marginTop: 50,fontSize:20}} type="text"
                        placeholder={'search'} ref={ref}/>
-                <button style={{width:100,fontSize:20}} onClick={searchMovies}>look up</button>
+                <button style={{width:100,fontSize:20,color:'black',fontWeight:600}} onClick={searchMovies}>look up</button>
             </div>
 
             <div style={{minHeight:60}}>

@@ -1,20 +1,20 @@
 #light{
-    background: #e3a094;
+    background: #e7e4e2;
 }
 
-#dark{
-    background: #1a1a34;
-}
+/*#dark{*/
+/*    background: #1a1a34;*/
+/*}*/
 
-#light .Header{
-    background: green;
-}
+/*#light .Header{*/
+/*    background: green;*/
+/*}*/
 
-#light .switch{
-    color: darkred;
-}
+/*#light .switch{*/
+/*    color: darkred;*/
+/*}*/
 
-#dark .switch{
-    color: darkblue;
-}
+/*#dark .switch{*/
+/*    color: darkblue;*/
+/*}*/
 

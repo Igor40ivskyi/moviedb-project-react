@@ -1,6 +1,6 @@
 .Header {
-    height: 70px;
-    /*background: dimgrey;*/
+    height: 65px;
+    background: snow;
     margin-bottom: 20px;
     font-weight: bold;
     font-size: 24px;
@@ -10,6 +10,8 @@
     border-radius: 5px;
     z-index: 2;
     box-sizing: border-box;
+    box-shadow: 0 0 0 2px silver;
+
 }
 
 .linkPack {
@@ -25,7 +27,7 @@
 }
 
 .Header a[class='active']{
-    color:snow;
+    color:darkred;
 }
 
 .user{
