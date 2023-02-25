@@ -1,6 +1,6 @@
 import {moviesService} from "../../services/moviesService";
 
-import css from './FoundMovies.module.css'
+import './FoundMovies.css';
 
 const FoundMovies = ({movie}) => {
 
@@ -14,12 +14,15 @@ const FoundMovies = ({movie}) => {
 
         <div>
 
-            {poster_path && <div className={css.FoundMoviesCard}>
-                <div className={css.FoundMoviesTitleBlock}>
+            {poster_path && <div className={"FoundMoviesCard"}>
+
+                <div className={"FoundMoviesTitleBlock"}>
                     {original_title}
                 </div>
+
                 <div>
                     <img style={{width: 200, maxHeight: 250, borderRadius: 5}} src={fullPoster} alt={original_title}/>
+
                 </div>
             </div>}
         </div>

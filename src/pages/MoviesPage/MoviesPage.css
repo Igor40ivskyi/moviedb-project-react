@@ -3,9 +3,49 @@
 }
 
 #dark{
-    background: #060211;
+    background: #0d0303;
 }
 
+#dark .Header{
+    background-color: #000000;
+}
+
+#dark a {
+    color:darkred;
+}
+
+#dark a[class='active'] {
+    color: #c7c0c0
+}
+
+#dark .moviesListBlock{
+    background-color: #0a0101;
+    /*color: snow;*/
+}
+
+#dark .titleBlock{
+    color: snow;
+}
+
+#dark .switch {
+    color:snow
+}
+
+#dark .correctWordBlock{
+    color: snow;
+}
+
+#dark .foundMoviesBlock{
+    background-color: #070101;
+}
+
+#dark .FoundMoviesCard {
+    background-color: #070101;
+}
+
+#dark .FoundMoviesTitleBlock{
+    color: snow;
+}
 /*#light .Header{*/
 /*    background: green;*/
 /*}*/

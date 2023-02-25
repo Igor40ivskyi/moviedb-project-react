@@ -23,9 +23,9 @@ const Header = () => {
                 </div>
             </div>
 
-            <div style={{width:190}} className={'switch'}>
+            <div style={{width:195}} className={'switch'}>
                 <ReactSwitch onChange={toggleTheme} checked={theme === 'light'}/>
-                <label>{theme === 'light'?'Light Mode':'Dark Mode'}</label>
+                <label style={{paddingLeft:5}}>{theme === 'light'?'Light Mode':'Dark Mode'}</label>
             </div>
             <div>
                 <div className={"user"}>

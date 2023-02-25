@@ -1,10 +1,10 @@
-import css from "../MoviesListCard/MoviesListCard.module.css";
+import "../MoviesListCard/MoviesListCard.css";
 import {PosterPreviewByGenreId} from "../PosterPreviewByGenreId/PosterPreviewByGenreId";
 import ReactStars from "react-stars/dist/react-stars";
 
 import './OneMovieByGenreId.css'
 
-import style from './OneMovieByGenreId.css'
+
 const OneMovieByGenreId = ({movieByGenreId}) => {
 
     const {id, original_language, original_title, poster_path, vote_average} = movieByGenreId;
@@ -13,7 +13,7 @@ const OneMovieByGenreId = ({movieByGenreId}) => {
     return (
         <div className={'card'} >
 
-            <div className={css.titleBlock}>{original_title}</div>
+            <div className={"titleBlock"}>{original_title}</div>
 
             <div>
                 <PosterPreviewByGenreId key={id} poster_path={poster_path}/>

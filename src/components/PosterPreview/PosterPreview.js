@@ -1,4 +1,4 @@
-import css from '../MoviesListCard/MoviesListCard.module.css'
+import '../MoviesListCard/MoviesListCard.css'
 
 const PosterPreview = ({poster_path}) => {
 
@@ -8,7 +8,7 @@ const PosterPreview = ({poster_path}) => {
 
     return (
         <div>
-            <img className={css.picture} src={fullPoster} alt="moviePoster"/>
+            <img className={"picture"} src={fullPoster} alt="moviePoster"/>
         </div>
     );
 };

@@ -1,4 +1,4 @@
-import css from './MoviesListCard.module.css'
+import './MoviesListCard.css';
 import {PosterPreview} from "../PosterPreview/PosterPreview";
 import {useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
@@ -26,8 +26,8 @@ const MoviesListCard = ({movie}) => {
     return (
         <div >
 
-            <div onClick={info} className={css.card}>
-                <div className={css.titleBlock}>{original_title}</div>
+            <div onClick={info} className={"card"}>
+                <div className={"titleBlock"}>{original_title}</div>
 
                 <div>
                     <PosterPreview key={id} poster_path={poster_path}/>

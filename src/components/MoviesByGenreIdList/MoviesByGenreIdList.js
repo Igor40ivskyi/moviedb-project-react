@@ -1,4 +1,4 @@
-import css from './MoviesByGenreIdList.module.css'
+import './MoviesByGenreIdList.css';
 import {useDispatch, useSelector} from "react-redux";
 import {OneMovieByGenreId} from "../OneMovieByGenreId/OneMovieByGenreId";
 import {useSearchParams} from "react-router-dom";
@@ -22,7 +22,7 @@ const MoviesByGenreIdList = () => {
     return (
         <div style={{display:'flex',justifyContent:'center'}} >
 
-            <div className={css.moviesListBlock}>
+            <div className={"moviesListBlock"}>
                 {moviesByGenreId && moviesByGenreId.map(movieByGenreId=><OneMovieByGenreId key={movieByGenreId.id} movieByGenreId={movieByGenreId}/>)}
             </div>
         </div>
