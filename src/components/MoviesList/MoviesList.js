@@ -60,7 +60,7 @@ const MoviesList = () => {
 
                         ?
                         <div className={'correctWordBlock'}>
-                            PLEASE ENTER CORRECT KEYWORD
+                            PLEASE ENTER CORRECT WORD
                         </div>
 
                         :
