@@ -93,6 +93,7 @@ const MoviesList = () => {
             </div>
 
             <div style={{width: '100%', marginTop: 50, marginBottom: 20}}>
+
                 <button className={"prevButton"} disabled={page === 1}
                         onClick={() => setQuery(query => ({page: +query.get('page') - 1}))}>&larr;</button>
 

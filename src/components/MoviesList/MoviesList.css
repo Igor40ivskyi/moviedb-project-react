@@ -30,21 +30,22 @@
     margin-bottom: 100px;
 
     font-size: 24px;
-     color: dimgray;
+     color: darkred;
     width: 120px;
     /*background-color: darkred;*/
     border-radius: 5px;
-    border: 2px solid dimgray;
+    /*border: 2px solid dimgray;*/
 }
 
 .nextButton{
     margin-left: 950px;
     font-size: 24px;
-    color: dimgray;
+    color: darkred;
     width: 120px;
-    background-color: inherit;
+    /*background-color: inherit;*/
     border-radius: 5px;
-    border: 2px solid dimgray;
+    /*border: 2px solid snow;*/
+    /*box-shadow: 0 0 0 2px grey;*/
 }
 
 .prevButton:hover{
@@ -61,12 +62,10 @@
 .prevButton:active{
     background-color: dimgray;
     color: black;
-    /*border: 2px solid black*/
 }
 .nextButton:active{
     background-color: dimgray;
     color: black;
-    /*border: 2px solid black*/
 }
 
 .foundMoviesBlock{
