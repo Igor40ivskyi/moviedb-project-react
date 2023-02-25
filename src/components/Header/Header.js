@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import {NavLink} from "react-router-dom";
-
 import ReactSwitch from "react-switch";
+
 import './Header.css';
 import {ThemeContext} from "../../App";
 

@@ -1,7 +1,9 @@
-import './MoviesListCard.css';
-import {PosterPreview} from "../PosterPreview/PosterPreview";
 import {useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
+
+import {PosterPreview} from "../PosterPreview/PosterPreview";
+
+import './MoviesListCard.css';
 
 
 import ReactStars from "react-stars/dist/react-stars";

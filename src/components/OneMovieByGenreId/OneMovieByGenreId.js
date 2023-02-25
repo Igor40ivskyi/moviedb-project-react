@@ -1,7 +1,8 @@
-import "../MoviesListCard/MoviesListCard.css";
-import {PosterPreviewByGenreId} from "../PosterPreviewByGenreId/PosterPreviewByGenreId";
 import ReactStars from "react-stars/dist/react-stars";
 
+import {PosterPreviewByGenreId} from "../PosterPreviewByGenreId/PosterPreviewByGenreId";
+
+import "../MoviesListCard/MoviesListCard.css";
 import './OneMovieByGenreId.css'
 
 

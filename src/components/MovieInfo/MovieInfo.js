@@ -1,5 +1,6 @@
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
+
 import {moviesActions} from "../../redux/slices/moviesSlice";
 import {MovieInfoFullData} from "../MovieInfoFullData/MovieInfoFullData";
 import {Trailer} from "../Trailer/Trailer";

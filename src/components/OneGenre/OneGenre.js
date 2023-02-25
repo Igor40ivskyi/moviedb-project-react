@@ -1,7 +1,10 @@
-import css from './OneGenre.module.css'
 import {useDispatch} from "react-redux";
-import {genresActions} from "../../redux/slices/genresSlice";
 import {useNavigate} from "react-router-dom";
+
+import {genresActions} from "../../redux/slices/genresSlice";
+
+import css from './OneGenre.module.css'
+
 const OneGenre = ({genre}) => {
 
     const {id, name} = genre;

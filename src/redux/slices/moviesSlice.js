@@ -102,7 +102,7 @@ let moviesSlice = createSlice({
     }),
 });
 
-const {reducer: moviesReducer, actions: {}} = moviesSlice;
+const {reducer: moviesReducer} = moviesSlice;
 
 const moviesActions = {getAllMovies, getSimilarMovies,getMovieById,getVideoByMovieId,getMoviesByKeyword};
 

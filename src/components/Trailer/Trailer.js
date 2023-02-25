@@ -1,4 +1,5 @@
 import YouTube from "react-youtube";
+
 import css from './Trailer.module.css'
 
 const Trailer = ({videosByMovieId}) => {

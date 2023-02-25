@@ -1,4 +1,3 @@
-import {moviesService} from "../../services/moviesService";
 
 import './FoundMovies.css';
 
@@ -22,8 +21,8 @@ const FoundMovies = ({movie}) => {
 
                 <div>
                     <img style={{width: 200, maxHeight: 250, borderRadius: 5}} src={fullPoster} alt={original_title}/>
-
                 </div>
+
             </div>}
         </div>
     );

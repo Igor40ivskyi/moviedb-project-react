@@ -1,5 +1,6 @@
-import css from './MovieInfoFullData.module.css'
 import {GenreBadge} from "../GenreBadge/GenreBadge";
+
+import css from './MovieInfoFullData.module.css'
 
 const MovieInfoFullData = ({movieById}) => {
 

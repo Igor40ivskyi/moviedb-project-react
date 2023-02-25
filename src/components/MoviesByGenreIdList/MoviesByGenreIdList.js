@@ -1,9 +1,10 @@
-import './MoviesByGenreIdList.css';
-import {useDispatch, useSelector} from "react-redux";
-import {OneMovieByGenreId} from "../OneMovieByGenreId/OneMovieByGenreId";
-import {useSearchParams} from "react-router-dom";
 import {useEffect} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {useSearchParams} from "react-router-dom";
+
+import {OneMovieByGenreId} from "../OneMovieByGenreId/OneMovieByGenreId";
 import {genresActions} from "../../redux/slices/genresSlice";
+import './MoviesByGenreIdList.css';
 
 const MoviesByGenreIdList = () => {
 
