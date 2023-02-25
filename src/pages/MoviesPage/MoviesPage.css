@@ -46,6 +46,14 @@
 #dark .FoundMoviesTitleBlock{
     color: snow;
 }
+
+#light .prevButton{
+    background-color: #cac4c4;
+}
+
+#light .nextButton{
+    background-color: #cac4c4;
+}
 /*#light .Header{*/
 /*    background: green;*/
 /*}*/
