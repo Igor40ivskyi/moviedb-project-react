@@ -34,7 +34,7 @@
     width: 120px;
     background-color: #432a2a;
     border-radius: 5px;
-    /*border: 2px solid dimgray;*/
+    border: 2px solid dimgray;
 }
 
 .nextButton{
@@ -44,7 +44,7 @@
     width: 120px;
     background-color: #432a2a;
     border-radius: 5px;
-    /*border: 2px solid snow;*/
+    border: 2px solid dimgray;
     /*box-shadow: 0 0 0 2px grey;*/
 }
 
