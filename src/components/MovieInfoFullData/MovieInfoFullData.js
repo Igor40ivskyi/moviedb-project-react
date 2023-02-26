@@ -16,9 +16,9 @@ const MovieInfoFullData = ({movieById}) => {
         <div style={{marginTop:100}}>
             <div className={css.movie_info_card}>
 
-                <div>
+                {backdrop_path ? <div>
                     <img style={{height:500}} src={fullPoster} alt={original_title}/>
-                </div>
+                </div> :<div style={{color:"snow",fontSize:20}}>IMAGE NOT FOUND</div> }
 
                 <div className={css.textSection}>
                     <div className={css.textSectionSlice}>
