@@ -4,15 +4,23 @@ import {PosterPreviewByGenreId} from "../PosterPreviewByGenreId/PosterPreviewByG
 
 import "../MoviesListCard/MoviesListCard.css";
 import './OneMovieByGenreId.css'
+import {useNavigate} from "react-router-dom";
 
 
 const OneMovieByGenreId = ({movieByGenreId}) => {
 
     const {id, original_language, original_title, poster_path, vote_average} = movieByGenreId;
 
+    const navigate = useNavigate();
+
+
+    const room = () => {
+        localStorage.setItem('pickedMovieId', id);
+        navigate('/info');
+    };
 
     return (
-        <div className={'card'} >
+        <div onClick={room} className={'card'} >
 
             <div className={"titleBlock"}>{original_title}</div>
 
