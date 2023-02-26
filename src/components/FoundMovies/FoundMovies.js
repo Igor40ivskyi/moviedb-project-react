@@ -1,17 +1,25 @@
 
 import './FoundMovies.css';
+import {useNavigate} from "react-router-dom";
 
 const FoundMovies = ({movie}) => {
 
     console.log(movie,'FOUND MOVIE');
 
-    const {original_title,poster_path,backdrop_path} = movie;
+    const {id,original_title,poster_path,backdrop_path} = movie;
 
     const fullPoster = `https://image.tmdb.org/t/p/w500${poster_path}`;
 
+    const navigate = useNavigate();
+
+    const room = () => {
+        localStorage.setItem('pickedMovieId',id)
+        navigate('/info');
+    };
+
     return (
 
-        <div>
+        <div onClick={room}>
 
             {poster_path && <div className={"FoundMoviesCard"}>
 
