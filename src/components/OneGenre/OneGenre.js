@@ -3,7 +3,7 @@ import {useNavigate} from "react-router-dom";
 
 import {genresActions} from "../../redux/slices/genresSlice";
 
-import css from './OneGenre.module.css'
+import './OneGenre.css';
 
 const OneGenre = ({genre}) => {
 
@@ -20,7 +20,7 @@ const OneGenre = ({genre}) => {
 
     return (
         <div>
-            <div onClick={getMoviesByGenreId} className={css.nameOfGenre}>{name}</div>
+            <div onClick={getMoviesByGenreId} className={"nameOfGenre"}>{name}</div>
         </div>
     );
 };

@@ -54,6 +54,21 @@
 #light .nextButton{
     background-color: #cac4c4;
 }
+
+#light .nameOfGenre:hover{
+    background-color: #cecbcb;
+}
+
+#dark .nameOfGenre{
+    background-color: #150606;
+    color: #908e8e;
+}
+
+#dark .nameOfGenre:hover{
+    background-color: #0a0101;
+    color: white;
+}
+
 /*#light .Header{*/
 /*    background: green;*/
 /*}*/
