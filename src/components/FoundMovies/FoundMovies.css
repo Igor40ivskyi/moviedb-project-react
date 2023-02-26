@@ -7,9 +7,13 @@
     border-radius: 5px;
     /*box-shadow: 1px 1px 1px 2px lightcoral;*/
     /*border: 2px solid #272727;*/
-    background-color: #cecaca;
+    background-color: #c3c0c0;
 }
 
+.FoundMoviesCard:hover{
+    cursor: cell;
+    box-shadow: 0 0 0 4px #d4cccc;
+}
 
 
 .FoundMoviesTitleBlock {
